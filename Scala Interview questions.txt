@@ -1,4 +1,5 @@
 Difference between Scala and Java?
+
 1.Scala is minimized version of Java.
 2.Scala is type-safe JVM language that incorporates both object-oriented and functional programming where
 3.Scala “variables” are immutable by default whereas Java variables are mutable by default.
