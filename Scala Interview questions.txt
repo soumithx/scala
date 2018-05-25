@@ -1,4 +1,4 @@
-Difference between Scala and Java?
+################################################Difference between Scala and Java?################################################
 
 1.Scala is minimized version of Java.
 2.Scala is type-safe JVM language that incorporates both object-oriented and functional programming where
@@ -9,15 +9,15 @@ Difference between Scala and Java?
 6.Scala has several options not available in Java,such as type inference,a powerful type system,pattern matching,traits and proper higher order functions
 7.Lazy Evaluation in Scala,it delays complex computations until it absolute necessary.
 
-HigherOrder functions:
- In Scala,HigherOrder functions take other functions as parameters or return a function as result,this is possible because functions are first class values in scala.
+###########################################  HigherOrder functions:  ###################################################################
+  --> In Scala,HigherOrder functions take other functions as parameters or return a function as result,this is possible because functions are first class values in scala.
  Reason to use higherOrder function is to reduce redundant code.
 
 
- what is case classes?
- --> Case classes are special type of classes,as the compiler automatically adds some usefull methods to them
- --> Case classes are Scala’s way to allow pattern matching on objects without requiring a large amount of boilerplate code
- --> Case class naturally support  for pattern matching
+################################## what is case classes? #####################################################################
+  --> Case classes are special type of classes,as the compiler automatically adds some usefull methods to them
+  --> Case classes are Scala’s way to allow pattern matching on objects without requiring a large amount of boilerplate code
+  --> Case class naturally support  for pattern matching
 
 
     # case class Person(name:String,age:Int)
@@ -30,8 +30,52 @@ HigherOrder functions:
        # val x = Person("SOUMITH",26)
        #x.name ==> SOUMITH
        #x.age ====> 26
-Scala compiler adds intutive implementations of toString,hashCode,Equals
+       Scala compiler adds intutive implementations of toString,hashCode,Equals
       val y = ("SOUMITH",26)
       val z = ("SAI",26)
       scala> x equals y  ==> True
             x equals z  ==> False
+##################################################### Pattern matching ###################################################################
+
+pattern matching is a mechanism for checking a value against a pattern.it is powerful version of switch statment in java.
+a pattern match includes sequence of alternatives,each start with  keyword case.
+each alternatives includes patterns and one or more expressions,which wil be evaluated if the pattren matches.
+'=>' separates pattern from the expressions.
+a 'match' expression is evaluted by trying each of the pattern in the order they are written.
+
+types of patterns :---> wild Pattern (case _)
+                   --->Constant Pattern ( case 5 => "five")
+                   ---> Variable Pattern (case something => "something")
+                   constant or variable ?
+                    scala treats a name with lower case a variable or upper case as a  Constant
+
+        import math.{E,Pi}
+        E match {
+          case Pi => "strane it is pi"+PI
+          case _  => "other value"
+        }
+        #################
+        val pi = scala.math.Pi
+        E match{
+          case pi=> "xyxabcd"
+        }
+                  --> constructer patterns:
+                  expr match {
+                      case BinOp("+", e, Number(0)) => println("a deep match")
+                      case _ =>
+                    }
+                 --> Sequence patterns:
+                 expr match {
+                   case List(0, _, _) => println("found it")
+                   case _ =>
+                 }
+                 If you want to match against a sequence without specifying how long it can be, you can specify _* as the last element of the pattern.
+               ---> Tuple Patterns:
+
+               def tupleDemo(expr: Any) =
+                  expr match {
+                      case (a, b, c)=>println("matched "+ a + b + c)
+                      case _ =>
+                    }
+
+                    
