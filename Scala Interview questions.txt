@@ -1,0 +1,36 @@
+Difference between Scala and Java?
+1.Scala is minimized version of Java.
+2.Scala is type-safe JVM language that incorporates both object-oriented and functional programming where
+3.Scala “variables” are immutable by default whereas Java variables are mutable by default.
+4.In Java the case statement provides for some limited conditional branching.
+  In Scala, it is possible to construct some very sophisticated pattern matching logic using the case / match construct which doesn't just bring new possibilities but a new type of thinking to realize new possibilities.
+5.Scala is Statically typed where as Java Dynamically typed.
+6.Scala has several options not available in Java,such as type inference,a powerful type system,pattern matching,traits and proper higher order functions
+7.Lazy Evaluation in Scala,it delays complex computations until it absolute necessary.
+
+HigherOrder functions:
+ In Scala,HigherOrder functions take other functions as parameters or return a function as result,this is possible because functions are first class values in scala.
+ Reason to use higherOrder function is to reduce redundant code.
+
+
+ what is case classes?
+ --> Case classes are special type of classes,as the compiler automatically adds some usefull methods to them
+ --> Case classes are Scala’s way to allow pattern matching on objects without requiring a large amount of boilerplate code
+ --> Case class naturally support  for pattern matching
+
+
+    # case class Person(name:String,age:Int)
+
+ 1.first one it generates is a factory method: it allows to create instances of the case class without the need of using the 'new' keyword.
+
+     # Person("SOUMITH",26)
+
+ 2. all the parameters are converted in immutable values that can be easily accessed without any side effects.
+       # val x = Person("SOUMITH",26)
+       #x.name ==> SOUMITH
+       #x.age ====> 26
+Scala compiler adds intutive implementations of toString,hashCode,Equals
+      val y = ("SOUMITH",26)
+      val z = ("SAI",26)
+      scala> x equals y  ==> True
+            x equals z  ==> False
