@@ -78,4 +78,18 @@ types of patterns :---> wild Pattern (case _)
                       case _ =>
                     }
 
-                    
+Traits --> traits are similar to interfaces in java,classes and objects can extends traits it cannot be initiated.
+          A trait encapusulates methods and field definations which can be reused by mixing them into classes.
+Single Ton Objects : An object is a class that has exactly one instance. It is created lazily when it is referenced, like a lazy val.
+
+Companion Objects :An object with the same name as a class is called a companion object. Conversely, the class is the object’s companion class. A companion class or object can access the private members of its companion
+
+option :  OPtion is container that can give you two values,an instance of Some ,or it can give you instance of None.
+          Scala try's to solve null pointer exceptions using Option.
+          Option is a like abstract class must be implmement Some and None
+
+
+Difference between Traits and abstract class?
+
+* a abstract class can have constructer parameters where as in traits it does'nt have any constructer parameters.
+* a class can extends only one abstract class at a time,where as class can extends multiple traits using 'with' keyword.
